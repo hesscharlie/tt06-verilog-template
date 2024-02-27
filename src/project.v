@@ -16,21 +16,9 @@ module tt_um_example (
     input  wire       rst_n     // reset_n - low to reset
 );
 
-    reg [0:7]out;
-
-    always @ (posedge clk or posedge rst_n)
-	    begin
-		    if (rst_n) 
-			    out= 8'b00000000;
-		    else
-                out={~out[7],out[0:6]};   
-	end
-
-    
-
   // All output pins must be assigned. If not used, assign to 0.
-  assign uo_out  = 0; 
-  assign uio_out = 0;
-  assign uio_oe  = 0;
+  assign uo_out  = 8'h00; 
+  assign uio_out = 8'h00;
+  assign uio_oe  = 8'h00;
 
 endmodule
