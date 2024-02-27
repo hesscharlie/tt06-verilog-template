@@ -19,7 +19,7 @@ module tt_um_example (
 
     always @ (posedge clk or posedge rst_n)
 	begin
-		if (r) 
+		if (rst_n     ) 
 			out= 8'h00;
 		else
             out={~out[7],out[0:7-1]};   
