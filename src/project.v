@@ -16,7 +16,7 @@ module tt_um_example (
     input  wire       rst_n     // reset_n - low to reset
 );
 
-
+    reg [0:7] out;
     always @ (posedge clk or posedge rst_n)
 	begin
 		if (rst_n     ) 
